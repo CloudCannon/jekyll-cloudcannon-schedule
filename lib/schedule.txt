@@ -1,0 +1,2 @@
+{% for post in page.future_posts %}{{ post.date | date_to_xmlschema }}, Build '{{ post.title }}', {{ post.path }}
+{% endfor %}
