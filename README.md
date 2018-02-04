@@ -3,6 +3,7 @@
 *Jekyll plugin to generate a schedule.txt for all future posts in your Jekyll site.*
 
 [![Build Status](https://travis-ci.org/CloudCannon/jekyll-cloudcannon-schedule.svg?branch=master)](https://travis-ci.org/CloudCannon/jekyll-cloudcannon-schedule)
+[![Gem Version](https://badge.fury.io/rb/jekyll-cloudcannon-schedule.svg)](https://badge.fury.io/rb/jekyll-cloudcannon-schedule)
 
 ## Usage
 
