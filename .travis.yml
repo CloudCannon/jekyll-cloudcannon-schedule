@@ -34,5 +34,5 @@ deploy:
   gem: jekyll-cloudcannon-schedule
   on:
     tags: true
-    repo: cloudcannon/jekyll-cloudcannon-schedule
+    repo: CloudCannon/jekyll-cloudcannon-schedule
     condition: "$GITHUB_PAGES == 1"
