@@ -6,7 +6,7 @@ require "jekyll-cloudcannon-schedule/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "jekyll-cloudcannon-schedule"
-  spec.summary     = "Automatically generate a schedule.txt for builds on CloudCannon."
+  spec.summary     = "Automatically generates _schedule.txt for builds on CloudCannon."
   spec.version     = Jekyll::CloudCannonSchedule::VERSION
   spec.authors     = ["CloudCannon Inc."]
   spec.email       = "support@cloudcannon.com"

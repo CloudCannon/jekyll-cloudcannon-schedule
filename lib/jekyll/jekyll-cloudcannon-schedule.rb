@@ -27,12 +27,12 @@ module Jekyll
     # Main plugin action, called by Jekyll-core
     def generate(site)
       @site = site
-      @site.pages << schedule unless file_exists?("schedule.txt")
+      @site.pages << schedule unless file_exists?("_schedule.txt")
     end
 
     private
 
-    def source_path(file = "schedule.txt")
+    def source_path(file = "_schedule.txt")
       File.expand_path "../#{file}", __dir__
     end
 
@@ -41,7 +41,7 @@ module Jekyll
     end
 
     def schedule
-      schedule = PageWithoutAFile.new(@site, __dir__, "", "schedule.txt")
+      schedule = PageWithoutAFile.new(@site, __dir__, "", "_schedule.txt")
       schedule.content = File.read(source_path)
       schedule.data["layout"] = nil
       schedule.data["future_posts"] = future_posts.map(&:to_liquid)

@@ -20,7 +20,7 @@ describe(Jekyll::JekyllCloudCannonSchedule) do
     }, overrides))
   end
   let(:site)     { Jekyll::Site.new(config) }
-  let(:contents) { File.read(dest_dir("schedule.txt")) }
+  let(:contents) { File.read(dest_dir("_schedule.txt")) }
   let(:context)  { make_context(site: site) }
   before(:each) do
     site.process
@@ -30,15 +30,15 @@ describe(Jekyll::JekyllCloudCannonSchedule) do
     expect(contents).not_to match(/\ATHIS IS MY LAYOUT/)
   end
 
-  it "creates a schedule.txt file" do
-    expect(Pathname.new(dest_dir("schedule.txt"))).to exist
+  it "creates a _schedule.txt file" do
+    expect(Pathname.new(dest_dir("_schedule.txt"))).to exist
   end
 
   it "has empty lines or formatted lines" do
     lines = contents.split("\n")
 
     lines.each do |line|
-      parts = line.split ", "
+      parts = line.split ","
       if parts.length < 2
         expect(line).to match(/^\s+$/)
       else
