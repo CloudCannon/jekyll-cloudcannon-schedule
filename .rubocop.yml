@@ -1,11 +1,17 @@
+require: rubocop-jekyll
+
 inherit_gem:
-  jekyll: .rubocop.yml
+  rubocop-jekyll: .rubocop.yml
 
 AllCops:
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 2.6
   Include:
-    - lib/*.rb
+    - lib/**/*.rb
 
   Exclude:
     - script/**/*
     - spec/**/*
+
+Naming/MemoizedInstanceVariableName:
+  Exclude:
+    - lib/jekyll/page-without-a-file.rb

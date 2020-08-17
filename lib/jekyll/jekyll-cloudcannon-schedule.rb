@@ -9,10 +9,9 @@ module Jekyll
       read_content(dir, magic_dir, matcher).tap { |docs| docs.each(&:read) }
         .each do |doc|
           next unless doc.content.valid_encoding?
+
           site.publisher.publish?(doc).tap do |will_publish|
-            if !will_publish && site.publisher.hidden_in_the_future?(doc)
-              future_posts << doc
-            end
+            future_posts << doc if !will_publish && site.publisher.hidden_in_the_future?(doc)
           end
         end
 
